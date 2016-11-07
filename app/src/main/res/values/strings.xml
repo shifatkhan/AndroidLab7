@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">DinoApp</string>
+    <string name="welcome_to_the_dino_app_here_you_can_view_many_information_about_your_favorite_dinos">Welcome to the Dino app! here you can view many information about your favorite dinos!</string>
+    <string-array name="dinoInfo_array">
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Mars</item>
+        <item>Mercury</item>
+        <item>Venus</item>
+        <item>Earth</item>
+        <item>Mars</item>
+        <item>Mars</item>
+    </string-array>
+</resources>
