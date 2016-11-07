@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -11,6 +12,11 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+/**
+ * This is the main app where we display the listview
+ *
+ * @author Shifat Khan
+ */
 public class MainActivity extends AppCompatActivity {
 
     ListView mListView;
@@ -32,17 +38,6 @@ public class MainActivity extends AppCompatActivity {
 
         mListView =(ListView) findViewById(R.id.dinoListView);
         mListView.setAdapter(new CustomAdapter(this, dinoNames, dinoImages));
-
-        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                // Create the intent and pass the index and dino name to next activity
-                Intent quoteIntent = new Intent(MainActivity.this, DinoInfoActivity.class);
-                quoteIntent.putExtra("index", i);
-                quoteIntent.putExtra("dinoName", dinoNames[i]);
-                startActivity(quoteIntent);
-            }
-        });
     }
 
     @Override

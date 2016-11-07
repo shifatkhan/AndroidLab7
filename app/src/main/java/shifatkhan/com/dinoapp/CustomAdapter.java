@@ -1,6 +1,8 @@
 package shifatkhan.com.dinoapp;
 
 import android.content.Context;
+import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -13,6 +15,7 @@ import android.widget.Toast;
 /**
  * This is a custom adapter extending the BaseAdapter in order to work with images
  *
+ * Code from https://www.caveofprogramming.com/guest-posts/custom-listview-with-imageview-and-textview-in-android.html
  * @author Shifat Khan
  * Created by 1435220 on 11/7/2016.
  */
@@ -65,8 +68,11 @@ public class CustomAdapter extends BaseAdapter{
         rowView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
-                Toast.makeText(context, "You Clicked "+result[position], Toast.LENGTH_LONG).show();
+                Log.v("MainActivity", "List Clicked");
+                Intent dinoIntent = new Intent(context,DinoInfoActivity.class);
+                dinoIntent.putExtra("index", position);
+                dinoIntent.putExtra("dinoName", result[position]);
+                context.startActivity(dinoIntent);
             }
         });
         return rowView;
