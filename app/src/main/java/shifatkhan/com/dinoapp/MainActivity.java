@@ -29,15 +29,14 @@ public class MainActivity extends AppCompatActivity {
     ListView mListView;
     Context context;
 
-    ArrayList prgmName;
-
     private SimpleCursorAdapter sca;
     private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setContentView(R.layout.activity_main);
+        /*
         String [] from = {DBHelper.COL_NAME, DBHelper.COL_ICON};
         int[] to = {R.id.textView1, R.id.imageView1};
 
@@ -66,6 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 context.startActivity(dinoIntent);
             }
         });
+        */
     }
 
     @Override
